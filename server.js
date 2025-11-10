@@ -1,10 +1,13 @@
-const express = require('express');
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
-const cookieParser = require('cookie-parser');
-const dotenv = require('dotenv');
+
+import express from 'express';
+import jwt from 'jsonwebtoken';
+import bcrypt from 'bcryptjs';
+import cookieParser from 'cookie-parser';
+import dotenv from 'dotenv';
 
 dotenv.config();
+
+
 
 const app = express();
 app.use(express.json());
@@ -151,4 +154,5 @@ app.listen(process.env.PORT, () => {
   console.log(`Server running on http://localhost:${process.env.PORT}`);
 });
 
-module.exports = app;
+export default app;
+
